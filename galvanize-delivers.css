@@ -17,6 +17,9 @@
 .rough-third {
   /*background-image: url(http://makeena.com/wp-content/uploads/2015/06/picnic1.jpg);
   background-repeat: round;*/
+  background-image: url('http://okefenokeecountryclub.us/wp-content/uploads/2015/04/finedining.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   font-weight: bolder;
   font-family: 'Bree Serif', serif;
 }
