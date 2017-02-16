@@ -23,3 +23,12 @@
   font-weight: bolder;
   font-family: 'Bree Serif', serif;
 }
+
+.style {
+  background-color: #B71C1C;
+}
+
+.classy {
+  background-color: #8bc34a;
+  color: black;
+}

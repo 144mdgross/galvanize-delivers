@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="galvanize-delivers.css">
@@ -16,7 +19,7 @@
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper">
+            <div class="style nav-wrapper">
                 <a href="#" class="brand-logo">Galvanize Delivers</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.html">About</a></li>
@@ -32,7 +35,7 @@
                 <div class="card">
                     <div class="card-image">
                         <img src="http://www.dashingdays.nl/wp-content/uploads/2012/01/Eating-healthy-001.jpg">
-                        <span class="card-title">Card Title</span>
+                        <span class="card-title">Breakfast</span>
                     </div>
                     <div class="card-content">
                         <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -49,7 +52,7 @@
                 <div class="card">
                     <div class="card-image">
                         <img src="http://www.traveller.com.au/content/dam/images/1/2/5/o/c/2/image.gallery.articleLeadwide.620x349.125ouh.png/1418345036259.jpg">
-                        <span class="card-title">Card Title</span>
+                        <span class="card-title">Appetizers</span>
                     </div>
                     <div class="card-content">
                         <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -95,8 +98,24 @@
                     </tbody>
                 </table>
             </div>
-            <!-- end of table -->
+            <!-- end of item table-->
+          <div class="col m4 l4">
+            <table>
+        <thead>
+          <tr>
+              <th data-field="name">Subtotal</th>
+              <th data-field="price">Total</th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <tr>
+            <td>999.99</td>
+            <td>$1899.94</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
           </div>
             <!-- end of card row -->
@@ -107,7 +126,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTdMa1jOo7XAcL2WATY5PADSbeLepJNEdGAqfXCNn34Scz-LaWc">
-                            <span class="card-title">Card Title</span>
+                            <span class="card-title">Dinner</span>
                         </div>
                         <div class="card-content">
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -126,7 +145,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img src="http://images.midwestliving.mdpcdn.com/sites/midwestliving.com/files/styles/slide/public/Chocolate-Strawberry-Shortcakes-RU225703.jpg?itok=zyt95Jl4">
-                            <span class="card-title">Card Title</span>
+                            <span class="card-title">Dessert</span>
                         </div>
                         <div class="card-content">
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -137,21 +156,65 @@
                     </div>
                 </div>
                 <!-- end of card four -->
-            </div>
-            <!-- end of card row 2 -->
+
+
+            <!-- start of icon card one -->
+            <div class="col s12 m4 l4">
+    <div class="card horizontal">
+      <div class="icon-block">
+        <i class ="material-icons">loyalty</i>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+          <!-- end of icon card one   -->
+
+          <!-- start of icon card two -->
+
+          <div class="col s12 m4 l4">
+    <div class="card horizontal">
+      <div class="icon-block">
+        <i class ="material-icons">phone</i>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+            <!-- end of card two -->
+
+          </div>
+          <!-- end of card row 2 -->
 
               <div class="row">
                 <!-- where the table used to live -->
               </div>
               <!-- end of table row div -->
 
-
-
-
-        <!-- creates a basic table  -->
-
-
     </main>
+
+                  <footer class="style page-footer">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col s12 m12 l12">
+                                  <h5 class="white-text">Galvanize Delivers</h5>
+                                  <p class="grey-text text-lighten-4">Fine Dining Delivered.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </footer>
 
 </body>
 
