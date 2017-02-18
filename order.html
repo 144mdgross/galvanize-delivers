@@ -7,6 +7,9 @@
     <!-- materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="galvanize-delivers.css">
@@ -14,207 +17,220 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
+    <script src="galvanize-delivers.js" charset="utf-8"></script>
+
 </head>
 
 <body>
     <header>
         <nav>
+            <!--navbar-->
             <div class="style nav-wrapper">
                 <a href="#" class="brand-logo">Galvanize Delivers</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.html">About</a></li>
+                  <li><a href="index.html">About</a></li>
+                  <li><a href="order.html" class="active classy">Order</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="container ">
-        <!-- card one -->
+    <main class="container-fluid">
+
         <div class="row">
-            <div class="col m4 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="http://www.dashingdays.nl/wp-content/uploads/2012/01/Eating-healthy-001.jpg">
-                        <span class="card-title">Breakfast</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Add to Order</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end of card one -->
+            <div class="col s12 m8 l8">
+                <!--dividing screen by 'half'-->
 
-            <!-- card two -->
-            <div class="col m4 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="http://www.traveller.com.au/content/dam/images/1/2/5/o/c/2/image.gallery.articleLeadwide.620x349.125ouh.png/1418345036259.jpg">
-                        <span class="card-title">Appetizers</span>
+                <!-- card one -->
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="http://www.dashingdays.nl/wp-content/uploads/2012/01/Eating-healthy-001.jpg">
+                                <span class="card-title">Breakfast</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" name="breakfast" value="$8.95" data-quantity ="0" class="putOnTable">Add to Order</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Add to Order</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end of card two -->
+                    <!-- end of card one -->
 
-            <div class="col m4 l4">
+
+
+                    <div class="col s12 m6 l6">
+                        <!-- card two -->
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="http://www.traveller.com.au/content/dam/images/1/2/5/o/c/2/image.gallery.articleLeadwide.620x349.125ouh.png/1418345036259.jpg">
+                                <span class="card-title">Appetizers</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" name="appetizers" value="$11.83" data-quantity ="0" class="putOnTable">Add to Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card two -->
+                </div>
+                <!--end of cards 1/2 row-->
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <!-- card three -->
+
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTdMa1jOo7XAcL2WATY5PADSbeLepJNEdGAqfXCNn34Scz-LaWc">
+                                <span class="card-title">Dinner</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" name="dinner" value="$16.79" data-quantity ="0" class="putOnTable">Add to Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card three -->
+
+
+                    <!-- card four -->
+
+                    <div class="col s12 m6 l6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="http://images.midwestliving.mdpcdn.com/sites/midwestliving.com/files/styles/slide/public/Chocolate-Strawberry-Shortcakes-RU225703.jpg?itok=zyt95Jl4">
+                                <span class="card-title">Dessert</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" name="dessert" value="$7.69" data-quantity ="0" class="putOnTable">Add to Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card four -->
+                </div><!-- end of card row 3/4 -->
+                </div><!--end of diving screen in half-->
+
+
+
+
+        <!-- <div class="row"> -->
+        <div class="col s12 m4 l4"><!--second half of screen -->
+          <div class="row"><!--row for table one-->
+            <div class="col s12 m12 l12">
+                <!--ordered items table-->
                 <table class="bordered striped highlight">
                     <thead>
                         <tr>
                             <th data-field="name">Item Name</th>
                             <th data-field="price">Item Price</th>
+                            <th data-field="quantity">Quantity</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="order">
+
+                    </tbody>
+                </table>
+            </div>
+          </div><!--end of row for first table-->
+            <!-- end of item table-->
+            <div class="row"><!--total row-->
+            <div class="col s12 m12 l12">
+                <!--total table-->
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-field="subtotal">Subtotal</th>
+                            <th data-field="tax">Tax</th>
+                            <th data-field="price">Total</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
-
-                            <td>Smarties</td>
-                            <td>$0.87</td>
+                            <td>$0.00</td>
+                            <td>%</td>
+                            <td>$0.00
                         </tr>
-                        <tr>
-
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-
-                            <td>Tootsie Roll</td>
-                            <td>$0.10</td>
-                        </tr>
-
                     </tbody>
                 </table>
             </div>
-            <!-- end of item table-->
-          <div class="col m4 l4">
-            <table>
-        <thead>
-          <tr>
-              <th data-field="name">Subtotal</th>
-              <th data-field="price">Total</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>999.99</td>
-            <td>$1899.94</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-          </div>
-            <!-- end of card row -->
-
-            <!-- card three -->
-            <div class="row">
-                <div class="col m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTdMa1jOo7XAcL2WATY5PADSbeLepJNEdGAqfXCNn34Scz-LaWc">
-                            <span class="card-title">Dinner</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">Add to Order</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of card three -->
+          </div><!--end of total row-->
+            <!--end of total table-->
 
 
-                <!-- card four -->
-
-                <div class="col m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://images.midwestliving.mdpcdn.com/sites/midwestliving.com/files/styles/slide/public/Chocolate-Strawberry-Shortcakes-RU225703.jpg?itok=zyt95Jl4">
-                            <span class="card-title">Dessert</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">Add to Order</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of card four -->
 
 
             <!-- start of icon card one -->
-            <div class="col s12 m4 l4">
-    <div class="card horizontal">
-      <div class="icon-block">
-        <i class ="material-icons">loyalty</i>
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Edit</a>
-        </div>
-      </div>
-    </div>
-  </div>
-          <!-- end of icon card one   -->
+          <div class="row"><!--icon card 1 row-->
+            <div class="col s12 m12 l12">
+                <div class="card horizontal">
+                    <div class="icon-block">
+                        <i class="material-icons">loyalty</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <!-- end of icon card one   -->
 
-          <!-- start of icon card two -->
-
-          <div class="col s12 m4 l4">
-    <div class="card horizontal">
-      <div class="icon-block">
-        <i class ="material-icons">phone</i>
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Edit</a>
-        </div>
-      </div>
-    </div>
-  </div>
+            <!-- start of icon card two -->
+          <div class="row"><!--icon card two row-->
+            <div class="col s12 m12 l12">
+                <div class="card horizontal">
+                    <div class="icon-block">
+                        <i class="material-icons">phone</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div><!--end of icon card two row-->
             <!-- end of card two -->
 
-          </div>
-          <!-- end of card row 2 -->
+          <!--should i make a row for the button? probably...-->
+            <a class="waves-effect waves-light btn center classy"><i class="material-icons left">play_arrow</i>Place Order</a>
 
-              <div class="row">
-                <!-- where the table used to live -->
-              </div>
-              <!-- end of table row div -->
+        </div><!--end of column-->
+      <!-- </div> -->
+      <!--end of row-->
+
+</div><!--end of row for dividing in half?-->
 
     </main>
 
-                  <footer class="style page-footer">
-                      <div class="container">
-                          <div class="row">
-                              <div class="col s12 m12 l12">
-                                  <h5 class="white-text">Galvanize Delivers</h5>
-                                  <p class="grey-text text-lighten-4">Fine Dining Delivered.</p>
-                              </div>
-                          </div>
-                      </div>
-                  </footer>
+    <footer class="style page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h5 class="white-text">Galvanize Delivers</h5>
+                    <p class="grey-text text-lighten-4">Fine Dining Delivered.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
