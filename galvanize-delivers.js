@@ -16,33 +16,43 @@ $(document).ready(function() {
         if (e.target === this) {
             //  do nothing
         } else if ($(e.target).hasClass('putOnTable')) {
-
+          // variables for use within functions
             let target = $(e.target)
             let value = $(e.target).attr("value")
             let item = $(e.target).attr("name")
             let quantity = parseInt($(e.target).attr("data-quantity"), 10)
 
-            //update the breakfast quantitydata
-            //   do i also want to create table elements now? if I'm already going to have tons of if statements
+            function updateQuantity(target) {
+                let name = target.attr("name")
 
-            //what if....I make a function and then call if when i need to add things to the table?
-            //could i also use a function to check for target matching an object?
-            if (quantity === 0) {
-                createOrder(quantity)
+                //this one will only update quantity if the item is already in the table
+                if (name === quantityKeys[0]) {
+                    // increment object value with each click
+                    qObject['breakfast'] += 1
+                    //  change data associated with html element to equal object value
+                    target.attr("data-quantity", qObject['breakfast'] )
+                    // update <td> with quantity info
+                    $('#qbreakfast').text(qObject['breakfast'])
 
-            } else if (quantity >= 1) {
-                updateQuantity($(e.target))
+                } else if (name === quantityKeys[1]) {
+                  qObject['appetizers'] += 1
+                  target.attr("data-quantity", qObject['appetizers'] )
+                  $('#qappetizers').text(qObject['appetizers'])
+
+                } else if (name === quantityKeys[2]) {
+                  qObject['dinner'] += 1
+                  target.attr("data-quantity", qObject['dinner'] )
+                  $('#qdinner').text(qObject['dinner'])
+
+                } else if (name === quantityKeys[3]) {
+                  qObject['dessert'] += 1
+                  target.attr("data-quantity", qObject['dessert'] )
+                  $('#qdessert').text(qObject['dessert'])
+                }
             }
 
-
-
-
-
-
-
             function createOrder(quantity) {
-              console.log(quantity, "quantity param")
-                //this one should create the Table Elements if they are cicked and their quantity is zero
+                //this one creates the Table Elements if they are cicked and their quantity is zero
                 //make row and append to table for each item
                 tableRow = $('<tr>')
                 tableBody.append(tableRow)
@@ -55,71 +65,28 @@ $(document).ready(function() {
                 tablePrice.text(value)
                 tableRow.append(tablePrice)
 
-                let tableQuantity = $('<td>')
-                tableQuantity.addClass("quantity")
-                // populate quantity position with 0 in this case
-                tableQuantity.text(quantity)
+                //   I either need to start over or I need to give the quantity
+                // column a different ID each time it's made....horray id!
+                let tableQuantity = $(`<td id="q${item}">`)
+
                 tableRow.append(tableQuantity)
-                //now I need to increment the quantity by one? should I call the function I made in this function to do that?
-                // seems messy....
 
+                // now update the quantity in the tables with corresponding item
                 updateQuantity(target)
-
-                //now how to update the corresponding quantity in the object so it can only happen once?
-
-
             }
 
-            //need to check for value being zero before this...
-            function updateQuantity(value) {
-                let name = value.attr("name")
+            //now actually create and update targets based off of their quantity.
+            if (quantity === 0) {
+                createOrder(quantity)
 
-                let addToQuantity = parseInt(value.attr("data-quantity"), 10)
-
-                //this one will only update quantity if the item is already in the table
-                if (name === quantityKeys[0]) {
-                    qObject['breakfast'] += 1
-
-                    // this updates the object but it should also update the actual attribute..
-                    addToQuantity += 1
-                    value.attr("data-quantity", addToQuantity)
-                    $(".quantity").text(addToQuantity)
-
-                } else if (name === quantityKeys[1]) {
-                    qObject['appetizers'] += 1
-                    addToQuantity += 1
-                    value.attr("data-quantity", addToQuantity)
-                    $(".quantity").text(addToQuantity)
-
-                } else if (name === quantityKeys[2]) {
-                    qObject['dinner'] += 1
-                    addToQuantity += 1
-                    value.attr("data-quantity", addToQuantity)
-                    $(".quantity").text(addToQuantity)
-
-
-                } else if (name === quantityKeys[3]) {
-                    qObject['dessert'] += 1
-                    addToQuantity += 1
-                    value.attr("data-quantity", addToQuantity)
-                    $(".quantity").text(addToQuantity)
-
-
-                }
+            } else if (quantity >= 1) {
+                updateQuantity(target)
             }
 
 
 
-        } //else if e.target.hasClass
+        } //  end of else if e.target.hasClass
 
+    }) // end of "click" event listener on main
 
-
-        //check to see what object key it matches
-    })
-
-})
-
-//  other function that could be created....
-//function to do the math for the subtotal, total and tax. How many functions shoudl that be?
-
-//function
+}) // end of Content ready.

@@ -170,48 +170,39 @@
 
 
 
-            <!-- start of icon card one -->
-          <div class="row"><!--icon card 1 row-->
-            <div class="col s12 m12 l12">
-                <div class="card horizontal">
-                    <div class="icon-block">
-                        <i class="material-icons">loyalty</i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">Edit</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- start of name and phone -->
+            <div class="row">
+      <form class="col s12" action="" get="">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" required>
+            <label for="icon_prefix">Full Name</label>
           </div>
-            <!-- end of icon card one   -->
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate" required>
+            <label for="icon_telephone" data-error="nope" data-success="right">Telephone</label>
+          </div>
+        </div>
 
-            <!-- start of icon card two -->
-          <div class="row"><!--icon card two row-->
-            <div class="col s12 m12 l12">
-                <div class="card horizontal">
-                    <div class="icon-block">
-                        <i class="material-icons">phone</i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">Edit</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div><!--end of icon card two row-->
-            <!-- end of card two -->
+    </div>
+            <!-- end of first form lines-->
+
+            <!-- start of email row -->
+            <div class="row">
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" required>
+            <label for="email" data-error="nope" data-success="right">Email</label>
+          </div>
+        </div>
+      </form>
+    </div>
 
           <!--should i make a row for the button? probably...-->
-            <a class="waves-effect waves-light btn center classy"><i class="material-icons left">play_arrow</i>Place Order</a>
+            <input type="submit" class="waves-effect waves-light btn classy" value="Place Order">
 
         </div><!--end of column-->
       <!-- </div> -->
@@ -224,11 +215,19 @@
     <footer class="style page-footer">
         <div class="container">
             <div class="row">
-                <div class="col s12 m12 l12">
+                <div class="col s12 m6 l6">
                     <h5 class="white-text">Galvanize Delivers</h5>
                     <p class="grey-text text-lighten-4">Fine Dining Delivered.</p>
+                  </div>
+                  <div class="col s12 m3 l3">
+                    <a href="index.html"><h5 class="white-text">About</h5></a>
+                    <a href="order.html"><h5 class="white-text">Order</h5></a>
+                  </div>
                 </div>
             </div>
+        <div class="footer-copyright">
+          <div class="container"> Made by Megan Gross
+          </div>
         </div>
     </footer>
 
