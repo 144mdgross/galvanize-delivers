@@ -1,15 +1,13 @@
 $(document).ready(function() {
 
     var tableSubtotal = 0
-    console.log(tableSubtotal, "tableSubtotal to start with")
     var tax = 0
     var total = 0
 
 
     // Initialize collapse button
     $(".button-collapse").sideNav();
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    //$('.collapsible').collapsible();
+
     var tableBody = $('.order')
 
     //tables and totalling
@@ -65,25 +63,17 @@ $(document).ready(function() {
             function dollars() {
                 //parse the value of each item into a number and chop off $
                 let price = parseFloat(value.substring(1))
-
                 tableSubtotal += price
                 $(".subtotal").text("$" + tableSubtotal.toFixed(2))
-                // price += subtotal
-                //console.log(tableSubtotal, "subtotal")
-                //doesn't work.....
 
                 //   now calculate the tax
                 tax = (tableSubtotal * .08995).toFixed(2)
                 taxInt = parseFloat(tax)
-                console.log(tax, "tax", typeof tax);
                 $('.tax').text("$" + tax)
-                console.log(tableSubtotal, "tableSubtotal")
+
                 // add it all together
                 total = (tableSubtotal + taxInt).toFixed(2)
-                console.log(total, "total")
                 $('.total').text("$" + total)
-
-
             } // end of dollars
 
             function createOrder(quantity) {
@@ -127,6 +117,6 @@ $(document).ready(function() {
 
     }) // end of "click" event listener on main
 
-    //add a separate event listener for the button for the sake of simplicity? 
+    //add a separate event listener for the button for the sake of simplicity?
 
 }) // end of Content ready.

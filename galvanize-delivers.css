@@ -37,23 +37,54 @@
   box-shadow: 0  0 3px rgba(255,0,0,0.5);
 }
 
-/*@media only screen and (max-width: 500px) {
-    body {
-        background-color: lightgreen;
+.card {
+  border-radius: 40%;
+}
+
+.card-image {
+  border-radius: 50%;
+}
+
+div h5 a {
+  color: #B71C1C;
+}
+
+#chocolate{
+  height: 15em;
+}
+
+@media only screen and (max-width : 992px) {
+   header, main, footer {
+     padding-left: 0;
+   }
+ }
+
+
+
+@media only screen and (max-width: 666px) {
+  body{
+    background-image: url('http://www.lobsterpotri.com/images/common/lobster-pot-background.jpg');
+  }
+    .rough-third {
+      background-image: url('https://s-media-cache-ak0.pinimg.com/736x/61/89/7d/61897d9e1e1dcc1702f7d43bfb2ad2db.jpg');
+      background-repeat: no-repeat;
     }
 }
 
-@media only screen and (min-width: 768px) {
-  body{
-    background-color: pink;
-  }
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 667px) {
   body {
-    background-color: lavender;
+    /*background-color: lavender;*/
+    background-image: url('http://www.tiptheme.com/wp-content/uploads/2015/07/paper-background-9.jpg');
+    background-repeat: repeat;
+    }
   }
 
-  @media only screen and (orientation: landscape) {
+  @media only screen and (min-width: 800px) {
+    body{
+      background-image: image('http://www.shximai.com/data/out/163/68523903-restaurant-wallpapers.jpg');
+    }
+  }
+  /*@media only screen and (orientation: landscape) {
       body {
           background-color: lightblue;
       }

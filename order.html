@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+
+    <!-- masonry cdn -->
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+
     <!-- materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -40,21 +44,21 @@
         <li>
             <div class="userView">
                 <div class="background">
-                    <img src="images/office.jpg">
+                    <img src="https://cdn.shutterstock.com/shutterstock/videos/13793207/thumb/1.jpg">
                 </div>
-                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#!user"><img class="circle" src="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Robot-512.png"></a>
                 <a href="#!name"><span class="white-text name">Galvanize Delivers</span></a>
             </div>
         </li>
         <li><a href="order.html" class="waves-effect"><i class="material-icons">shopping_basket</i>Order</a></li>
-        <li><a href="index.html" class="waves-effect">About</a></li>
+        <li><a href="index.html" class="waves-effect"><i class="material-icons">local_library</i>About</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+
+
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
     <!-- end of slide out nav -->
 
     <main class="container-fluid">
@@ -65,20 +69,22 @@
 
                 <!-- card one -->
                 <div class="row">
-                    <div class="col s12 m6 l6">
+                    <div class="col s12 m6 l6 ">
                         <div class="card hoverable">
                             <div class="card-image">
                                 <img src="http://www.dashingdays.nl/wp-content/uploads/2012/01/Eating-healthy-001.jpg">
                                 <span class="card-title">Breakfast</span>
                             </div>
                             <div class="card-content">
-                                <p>Spoil yourself.</p>
+                                <p class="center-align">Feast.</p>
                                 <br>
-                                <p>$8.95</p>
+                                <p class="center-align">$8.95</p>
+                                <br>
+                                <h5 class="center-align"><a href="#/" name="breakfast" value="$8.95" data-quantity="0" class="putOnTable">Add to Order</a></h5>
                             </div>
-                            <div class="card-action">
+                            <!-- <div class="card-action">
                                 <a href="#" name="breakfast" value="$8.95" data-quantity="0" class="putOnTable">Add to Order</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- end of card one -->
@@ -93,13 +99,15 @@
                                 <span class="card-title">Lunch</span>
                             </div>
                             <div class="card-content">
-                                <p>Eat delicious.</p>
+                                <p class="center-align">Eat delicious.</p>
                                 <br>
-                                <p>$11.83</p>
+                                <p class="center-align">$11.83</p>
+                                <br>
+                                <h5 class="center-align"><a href="#/" name="appetizers" value="$11.83" data-quantity="0" class="putOnTable">Add to Order</a></h5>
                             </div>
-                            <div class="card-action">
+                            <!-- <div class="card-action">
                                 <a href="#" name="appetizers" value="$11.83" data-quantity="0" class="putOnTable">Add to Order</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- end of card two -->
@@ -115,13 +123,15 @@
                                 <span class="card-title">Dinner</span>
                             </div>
                             <div class="card-content">
-                                <p>What's dinner without pizza?</p>
+                                <p class="center-align">P-i-z-z-a</p>
                                 <br>
-                                <p>$16.79</p>
+                                <p class="center-align">$16.79</p>
+                                <br>
+                                <h5 class="center-align"><a href="#/" name="dinner" value="$16.79" data-quantity="0" class="putOnTable">Add to Order</a></h5>
                             </div>
-                            <div class="card-action">
+                            <!-- <div class="card-action">
                                 <a href="#" name="dinner" value="$16.79" data-quantity="0" class="putOnTable">Add to Order</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- end of card three -->
@@ -132,17 +142,20 @@
                     <div class="col s12 m6 l6">
                         <div class="card hoverable">
                             <div class="card-image">
-                                <img src="http://images.midwestliving.mdpcdn.com/sites/midwestliving.com/files/styles/slide/public/Chocolate-Strawberry-Shortcakes-RU225703.jpg?itok=zyt95Jl4">
+                                <!-- <img src="http://images.midwestliving.mdpcdn.com/sites/midwestliving.com/files/styles/slide/public/Chocolate-Strawberry-Shortcakes-RU225703.jpg?itok=zyt95Jl4" id="chocolate"> -->
+                                <img src="https://www.ghirardelli.com/media/recipe/recipes/chocolate-raspberry-brownie-trifles_1480x690.jpg">
                                 <span class="card-title">Dessert</span>
                             </div>
                             <div class="card-content">
-                                <p>You know you want this.</p>
+                                <p class="center-align">You know you want this.</p>
                                 <br>
-                                <p>$7.96</p>
+                                <p class="center-align">$7.96</p>
+                                <br>
+                                <h5 class="center-align"><a href="#/" name="dessert" value="$7.96" data-quantity="0" class="putOnTable">Add to Order</a></h5>
                             </div>
-                            <div class="card-action">
+                            <!-- <div class="card-action">
                                 <a href="#" name="dessert" value="$7.96" data-quantity="0" class="putOnTable">Add to Order</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- end of card four -->
