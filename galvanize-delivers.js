@@ -1,17 +1,18 @@
 $(document).ready(function() {
 
-  var tableSubtotal = 0
-  console.log(tableSubtotal, "tableSubtotal to start with")
-  var tax = 0
-  var total = 0
+    var tableSubtotal = 0
+    console.log(tableSubtotal, "tableSubtotal to start with")
+    var tax = 0
+    var total = 0
 
 
-  // Initialize collapse button
-$(".button-collapse").sideNav();
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-//$('.collapsible').collapsible();
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();
     var tableBody = $('.order')
 
+    //tables and totalling
     qObject = {
         breakfast: parseInt($('[name="breakfast"]').attr("data-quantity"), 10),
         appetizers: parseInt($('[name="appetizers"]').attr("data-quantity"), 10),
@@ -21,13 +22,11 @@ $(".button-collapse").sideNav();
 
     let quantityKeys = Object.keys(qObject)
 
-
-
     $('main').click(function(e) {
         if (e.target === this) {
             //  do nothing
         } else if ($(e.target).hasClass('putOnTable')) {
-          // variables for use within functions
+            // variables for use within functions
             let target = $(e.target)
             let value = $(e.target).attr("value")
             // console.log(value, "value")
@@ -42,59 +41,50 @@ $(".button-collapse").sideNav();
                     // increment object value with each click
                     qObject['breakfast'] += 1
                     //  change data associated with html element to equal object value
-                    target.attr("data-quantity", qObject['breakfast'] )
+                    target.attr("data-quantity", qObject['breakfast'])
                     // update <td> with quantity info
                     $('#qbreakfast').text(qObject['breakfast'])
 
                 } else if (name === quantityKeys[1]) {
-                  qObject['appetizers'] += 1
-                  target.attr("data-quantity", qObject['appetizers'] )
-                  $('#qappetizers').text(qObject['appetizers'])
+                    qObject['appetizers'] += 1
+                    target.attr("data-quantity", qObject['appetizers'])
+                    $('#qappetizers').text(qObject['appetizers'])
 
                 } else if (name === quantityKeys[2]) {
-                  qObject['dinner'] += 1
-                  target.attr("data-quantity", qObject['dinner'] )
-                  $('#qdinner').text(qObject['dinner'])
+                    qObject['dinner'] += 1
+                    target.attr("data-quantity", qObject['dinner'])
+                    $('#qdinner').text(qObject['dinner'])
 
                 } else if (name === quantityKeys[3]) {
-                  qObject['dessert'] += 1
-                  target.attr("data-quantity", qObject['dessert'] )
-                  $('#qdessert').text(qObject['dessert'])
+                    qObject['dessert'] += 1
+                    target.attr("data-quantity", qObject['dessert'])
+                    $('#qdessert').text(qObject['dessert'])
                 }
             }
 
+            function dollars() {
+                //parse the value of each item into a number and chop off $
+                let price = parseFloat(value.substring(1))
+
+                tableSubtotal += price
+                $(".subtotal").text("$" + tableSubtotal.toFixed(2))
+                // price += subtotal
+                //console.log(tableSubtotal, "subtotal")
+                //doesn't work.....
+
+                //   now calculate the tax
+                tax = (tableSubtotal * .08995).toFixed(2)
+                taxInt = parseFloat(tax)
+                console.log(tax, "tax", typeof tax);
+                $('.tax').text("$" + tax)
+                console.log(tableSubtotal, "tableSubtotal")
+                // add it all together
+                total = (tableSubtotal + taxInt).toFixed(2)
+                console.log(total, "total")
+                $('.total').text("$" + total)
 
 
-            // console.log(dollars())
-            // now for the subtotal tax and total
-            function dollars () {
-              //parse the value of each item into a number and chop off $
-              let price = parseFloat(value.substring(1))
-              tableSubtotal += price
-              $(".subtotal").text("$"+tableSubtotal)
-              // price += subtotal
-              //console.log(tableSubtotal, "subtotal")
-              //doesn't work.....
-
-              //   now calculate the tax
-              tax = (tableSubtotal * .08995).toFixed(2)
-              $('.tax').text("$"+tax)
-
-
-                }// end of dollars
-
-
-
-
-              //this coerces value into a number w/o the dollar symbol
-              //why isn't this working on the first click? It needs to be accessed by the create function too?
-              // or I need to do these calculations from the table directly
-              // let price = +value.substring(1)
-              // let tableQuantity = quantity + 1
-              // subtotal = 0
-              // console.log(price, "price")
-              // console.log(tableQuantity, 'quantity')
-
+            } // end of dollars
 
             function createOrder(quantity) {
                 //this one creates the Table Elements if they are cicked and their quantity is zero
@@ -130,27 +120,13 @@ $(".button-collapse").sideNav();
 
             } else if (quantity >= 1) {
                 updateQuantity(target)
-                dollars()//what to I pass into dollars to get it to work?
+                dollars()
             }
-
-
-
-              // let subtotal = 0
-              // if($('#v$8.95')===undefined || $('#v$11.83') === undefined || $('#v$16.79')===undefined || $('#v$7.96') === undefined) {
-
-// console.log(dollars());
-
-
-                //now i need to get the values, trim them, add them, multiply them, add that result to the subtotal and get the actual total. add append each of those to the total table. Should this be part of the event listener or read that separetly.
-
-
-
-
-
-
 
         } //  end of else if e.target.hasClass
 
     }) // end of "click" event listener on main
+
+    //add a separate event listener for the button for the sake of simplicity? 
 
 }) // end of Content ready.
