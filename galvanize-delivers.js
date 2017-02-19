@@ -1,4 +1,15 @@
 $(document).ready(function() {
+
+  var tableSubtotal = 0
+  console.log(tableSubtotal, "tableSubtotal to start with")
+  var tax = 0
+  var total = 0
+
+
+  // Initialize collapse button
+$(".button-collapse").sideNav();
+// Initialize collapsible (uncomment the line below if you use the dropdown variation)
+//$('.collapsible').collapsible();
     var tableBody = $('.order')
 
     qObject = {
@@ -19,6 +30,7 @@ $(document).ready(function() {
           // variables for use within functions
             let target = $(e.target)
             let value = $(e.target).attr("value")
+            // console.log(value, "value")
             let item = $(e.target).attr("name")
             let quantity = parseInt($(e.target).attr("data-quantity"), 10)
 
@@ -51,6 +63,39 @@ $(document).ready(function() {
                 }
             }
 
+
+
+            // console.log(dollars())
+            // now for the subtotal tax and total
+            function dollars () {
+              //parse the value of each item into a number and chop off $
+              let price = parseFloat(value.substring(1))
+              tableSubtotal += price
+              $(".subtotal").text("$"+tableSubtotal)
+              // price += subtotal
+              //console.log(tableSubtotal, "subtotal")
+              //doesn't work.....
+
+              //   now calculate the tax
+              tax = (tableSubtotal * .08995).toFixed(2)
+              $('.tax').text("$"+tax)
+
+
+                }// end of dollars
+
+
+
+
+              //this coerces value into a number w/o the dollar symbol
+              //why isn't this working on the first click? It needs to be accessed by the create function too?
+              // or I need to do these calculations from the table directly
+              // let price = +value.substring(1)
+              // let tableQuantity = quantity + 1
+              // subtotal = 0
+              // console.log(price, "price")
+              // console.log(tableQuantity, 'quantity')
+
+
             function createOrder(quantity) {
                 //this one creates the Table Elements if they are cicked and their quantity is zero
                 //make row and append to table for each item
@@ -61,7 +106,10 @@ $(document).ready(function() {
                 tableItem.text(item)
                 tableRow.append(tableItem)
                 //populate table with price
+                // let tablePrice = $(`<td id="v${value}">`)
                 let tablePrice = $('<td>')
+                // tablePrice.addClass("subtotal")
+                // console.log(tablePrice, "blah lbah blahblabh")
                 tablePrice.text(value)
                 tableRow.append(tablePrice)
 
@@ -78,10 +126,26 @@ $(document).ready(function() {
             //now actually create and update targets based off of their quantity.
             if (quantity === 0) {
                 createOrder(quantity)
+                dollars()
 
             } else if (quantity >= 1) {
                 updateQuantity(target)
+                dollars()//what to I pass into dollars to get it to work?
             }
+
+
+
+              // let subtotal = 0
+              // if($('#v$8.95')===undefined || $('#v$11.83') === undefined || $('#v$16.79')===undefined || $('#v$7.96') === undefined) {
+
+// console.log(dollars());
+
+
+                //now i need to get the values, trim them, add them, multiply them, add that result to the subtotal and get the actual total. add append each of those to the total table. Should this be part of the event listener or read that separetly.
+
+
+
+
 
 
 

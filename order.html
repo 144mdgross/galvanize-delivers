@@ -28,12 +28,34 @@
             <div class="style nav-wrapper">
                 <a href="#" class="brand-logo">Galvanize Delivers</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="index.html">About</a></li>
-                  <li><a href="order.html" class="active classy">Order</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="order.html" class="active classy">Order</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <!-- slide out nav -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img src="images/office.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#!name"><span class="white-text name">Galvanize Delivers</span></a>
+            </div>
+        </li>
+        <li><a href="order.html" class="waves-effect"><i class="material-icons">shopping_basket</i>Order</a></li>
+        <li><a href="index.html" class="waves-effect">About</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- end of slide out nav -->
 
     <main class="container-fluid">
 
@@ -50,10 +72,12 @@
                                 <span class="card-title">Breakfast</span>
                             </div>
                             <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <p>Spoil yourself.</p>
+                                <br>
+                                <p>$8.95</p>
                             </div>
                             <div class="card-action">
-                                <a href="#" name="breakfast" value="$8.95" data-quantity ="0" class="putOnTable">Add to Order</a>
+                                <a href="#" name="breakfast" value="$8.95" data-quantity="0" class="putOnTable">Add to Order</a>
                             </div>
                         </div>
                     </div>
@@ -66,13 +90,15 @@
                         <div class="card hoverable">
                             <div class="card-image">
                                 <img src="http://www.traveller.com.au/content/dam/images/1/2/5/o/c/2/image.gallery.articleLeadwide.620x349.125ouh.png/1418345036259.jpg">
-                                <span class="card-title">Appetizers</span>
+                                <span class="card-title">Lunch</span>
                             </div>
                             <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <p>Eat delicious.</p>
+                                <br>
+                                <p>$11.83</p>
                             </div>
                             <div class="card-action">
-                                <a href="#" name="appetizers" value="$11.83" data-quantity ="0" class="putOnTable">Add to Order</a>
+                                <a href="#" name="appetizers" value="$11.83" data-quantity="0" class="putOnTable">Add to Order</a>
                             </div>
                         </div>
                     </div>
@@ -89,10 +115,12 @@
                                 <span class="card-title">Dinner</span>
                             </div>
                             <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <p>What's dinner without pizza?</p>
+                                <br>
+                                <p>$16.79</p>
                             </div>
                             <div class="card-action">
-                                <a href="#" name="dinner" value="$16.79" data-quantity ="0" class="putOnTable">Add to Order</a>
+                                <a href="#" name="dinner" value="$16.79" data-quantity="0" class="putOnTable">Add to Order</a>
                             </div>
                         </div>
                     </div>
@@ -108,107 +136,118 @@
                                 <span class="card-title">Dessert</span>
                             </div>
                             <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <p>You know you want this.</p>
+                                <br>
+                                <p>$7.96</p>
                             </div>
                             <div class="card-action">
-                                <a href="#" name="dessert" value="$7.69" data-quantity ="0" class="putOnTable">Add to Order</a>
+                                <a href="#" name="dessert" value="$7.96" data-quantity="0" class="putOnTable">Add to Order</a>
                             </div>
                         </div>
                     </div>
                     <!-- end of card four -->
-                </div><!-- end of card row 3/4 -->
-                </div><!--end of diving screen in half-->
-
-
-
-
-        <!-- <div class="row"> -->
-        <div class="col s12 m4 l4"><!--second half of screen -->
-          <div class="row"><!--row for table one-->
-            <div class="col s12 m12 l12">
-                <!--ordered items table-->
-                <table class="bordered striped highlight">
-                    <thead>
-                        <tr>
-                            <th data-field="name">Item Name</th>
-                            <th data-field="price">Item Price</th>
-                            <th data-field="quantity">Quantity</th>
-                        </tr>
-                    </thead>
-
-                    <tbody class="order">
-
-                    </tbody>
-                </table>
+                </div>
+                <!-- end of card row 3/4 -->
             </div>
-          </div><!--end of row for first table-->
-            <!-- end of item table-->
-            <div class="row"><!--total row-->
-            <div class="col s12 m12 l12">
-                <!--total table-->
-                <table>
-                    <thead>
-                        <tr>
-                            <th data-field="subtotal">Subtotal</th>
-                            <th data-field="tax">Tax</th>
-                            <th data-field="price">Total</th>
-                        </tr>
-                    </thead>
+            <!--end of diving screen in half-->
 
-                    <tbody>
-                        <tr>
-                            <td>$0.00</td>
-                            <td>%</td>
-                            <td>$0.00
-                        </tr>
-                    </tbody>
-                </table>
+
+
+
+            <!-- <div class="row"> -->
+            <div class="col s12 m4 l4">
+                <!--second half of screen -->
+                <div class="row">
+                    <!--row for table one-->
+                    <div class="col s12 m12 l12">
+                        <!--ordered items table-->
+                        <table class="bordered striped highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="name">Item Name</th>
+                                    <th data-field="price">Item Price</th>
+                                    <th data-field="quantity">Quantity</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="order">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--end of row for first table-->
+                <!-- end of item table-->
+                <div class="row">
+                    <!--total row-->
+                    <div class="col s12 m12 l12">
+                        <!--total table-->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-field="subtotal">Subtotal</th>
+                                    <th data-field="tax">Tax</th>
+                                    <th data-field="price">Total</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="totally">
+                                <tr>
+                                    <td class="subtotal">$0.00</td>
+                                    <td class="tax">%</td>
+                                    <td class="total">$0.00
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--end of total row-->
+                <!--end of total table-->
+
+
+
+
+                <!-- start of name and phone -->
+                <div class="row">
+                    <form class="col s12" action="" get="">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_prefix" type="text" class="validate" required="true">
+                                <label for="icon_prefix">Full Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">phone</i>
+                                <input id="icon_telephone" type="tel" class="validate" required="true">
+                                <label for="icon_telephone" data-error="nope" data-success="right">Telephone</label>
+                            </div>
+                        </div>
+
+                </div>
+                <!-- end of first form lines-->
+
+                <!-- start of email row -->
+                <div class="row">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate" required="true">
+                            <label for="email" data-error="nope" data-success="right">Email</label>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+                <!--should i make a row for the button? probably...-->
+                <input type="submit" class="waves-effect waves-light btn classy" value="Place Order">
+
             </div>
-          </div><!--end of total row-->
-            <!--end of total table-->
+            <!--end of column-->
+            <!-- </div> -->
+            <!--end of row-->
 
-
-
-
-            <!-- start of name and phone -->
-            <div class="row">
-      <form class="col s12" action="" get="">
-        <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate" required>
-            <label for="icon_prefix">Full Name</label>
-          </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">phone</i>
-            <input id="icon_telephone" type="tel" class="validate" required>
-            <label for="icon_telephone" data-error="nope" data-success="right">Telephone</label>
-          </div>
         </div>
-
-    </div>
-            <!-- end of first form lines-->
-
-            <!-- start of email row -->
-            <div class="row">
-
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" required>
-            <label for="email" data-error="nope" data-success="right">Email</label>
-          </div>
-        </div>
-      </form>
-    </div>
-
-          <!--should i make a row for the button? probably...-->
-            <input type="submit" class="waves-effect waves-light btn classy" value="Place Order">
-
-        </div><!--end of column-->
-      <!-- </div> -->
-      <!--end of row-->
-
-</div><!--end of row for dividing in half?-->
+        <!--end of row for dividing in half?-->
 
     </main>
 
@@ -218,16 +257,16 @@
                 <div class="col s12 m6 l6">
                     <h5 class="white-text">Galvanize Delivers</h5>
                     <p class="grey-text text-lighten-4">Fine Dining Delivered.</p>
-                  </div>
-                  <div class="col s12 m3 l3">
+                </div>
+                <div class="col s12 m3 l3">
                     <a href="index.html"><h5 class="white-text">About</h5></a>
                     <a href="order.html"><h5 class="white-text">Order</h5></a>
-                  </div>
                 </div>
             </div>
+        </div>
         <div class="footer-copyright">
-          <div class="container"> Made by Megan Gross
-          </div>
+            <div class="container"> Made by Megan Gross
+            </div>
         </div>
     </footer>
 
