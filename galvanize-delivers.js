@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    var tableSubtotal = 0
-    var tax = 0
-    var total = 0
+    let tableSubtotal = 0
+    let tax = 0
+    let total = 0
 
 
     // Initialize collapse button
@@ -10,7 +10,8 @@ $(document).ready(function() {
 
     var tableBody = $('.order')
 
-    //tables and totalling
+
+    //  tables and totalling
     qObject = {
         breakfast: parseInt($('[name="breakfast"]').attr("data-quantity"), 10),
         appetizers: parseInt($('[name="appetizers"]').attr("data-quantity"), 10),
@@ -18,6 +19,7 @@ $(document).ready(function() {
         dessert: parseInt($('[name="dessert"]').attr("data-quantity"), 10)
     }
 
+    // access object keys for comparison later
     let quantityKeys = Object.keys(qObject)
 
     $('main').click(function(e) {
@@ -80,6 +82,7 @@ $(document).ready(function() {
                 //this one creates the Table Elements if they are cicked and their quantity is zero
                 //make row and append to table for each item
                 tableRow = $('<tr>')
+                tableRow.addClass('order-me')
                 tableBody.append(tableRow)
                 //make item and append to row
                 let tableItem = $('<td>')
@@ -113,10 +116,33 @@ $(document).ready(function() {
                 dollars()
             }
 
-        } //  end of else if e.target.hasClass
+        } //  end of else if e.target.hasClass('putOnTable')
+        else if ($(e.target).hasClass('send')) {
+
+            if (!validateForm()) {
+                Materialize.toast('please tell us about yourself', 4000)
+            }
+              else if ($('.order').children().length === 0) {
+                Materialize.toast('order food', 4000)
+            }
+              else {
+                Materialize.toast('your food is on the way', 4000)
+            }
+
+        }
+
 
     }) // end of "click" event listener on main
 
-    //add a separate event listener for the button for the sake of simplicity?
+    //  add a separate event listener for the button for the sake of simplicity?
 
 }) // end of Content ready.
+
+function validateForm() {
+    var isValid = true;
+    $('.validate').each(function() {
+        if ($(this).val() === '')
+            isValid = false;
+    });
+    return isValid;
+}
