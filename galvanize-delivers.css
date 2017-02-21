@@ -38,18 +38,7 @@ div h5 a {
   background-color: #B71C1C;
 }
 
-.order, tr, th, td {
-  font-size: 1.3em;
-}
- label {
-    font-size: 2em;
- }
 
-@media only screen and (max-width : 992px) {
-   header, main, footer {
-     padding-left: 0;
-   }
- }
 
  @media only screen and (max-width: 599px) {
    body{
@@ -60,7 +49,7 @@ div h5 a {
        background-size: auto;
        border-radius: 50%;
      }
-     p {
+     /*p {
        font-size: 2em;
      }
      h5 {
@@ -68,17 +57,19 @@ div h5 a {
      }
      .material-icons {
        font-size: 2em;
-     }
+     }*/
 
-   .delivery {
+   /*.delivery {
      font-size: 5em;
      font-weight: bolder;
      color: black;
-   }
+   }*/
+
  }
 
 
 @media only screen and (max-device-width: 480px) {
+
   body{
     background-image: url('http://www.lobsterpotri.com/images/common/lobster-pot-background.jpg');
   }
@@ -91,7 +82,7 @@ div h5 a {
       font-size: 2em;
     }
     h5 {
-      font-size: 3em;
+      font-size: 2em;
     }
     .material-icons {
       font-size: 2em;
@@ -102,9 +93,18 @@ div h5 a {
     font-weight: bolder;
     color: black;
   }
+
+  .order, tr, th, td {
+    font-size: 1.3em;
+  }
+
+   main {
+     padding-left: 0px;
+   }
+
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   body {
     background-image: url('http://www.tiptheme.com/wp-content/uploads/2015/07/paper-background-9.jpg');
     background-repeat: repeat;
@@ -120,19 +120,17 @@ div h5 a {
     .material-icons {
       font-size: 3em;
     }
-
-    main {
-      padding-left: 240px;
+    .order, tr, th, td {
+      font-size: 1.5em;
     }
+
   }
 
-  @media only screen and (min-width: 768px) {
-    body{
-
-    }
+  @media only screen and (min-width: 769px) {
 
     p {
       font-size: 1em;
+      line-height: 1.5em;
     }
     h5 {
       font-size: 2em;
@@ -143,6 +141,12 @@ div h5 a {
 
     body {
       padding-left: 0;
+        background-image: url('http://www.tiptheme.com/wp-content/uploads/2015/07/paper-background-9.jpg');
+        background-repeat: repeat;
+    }
+
+    .order, th, tr, td  {
+      font-size: 1em;
     }
 
   }
